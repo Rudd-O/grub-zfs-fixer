@@ -73,6 +73,6 @@ tank/ROOT/fedora       /     zfs       defaults     0 0
 Re-run `grub2-mkconfig` on the target system
 --------------------------------------------
 
-Within the target system, re-run `/usr/sbin/grub2-mkconfig`.
+Within the target system, re-run `/usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg`.  (You may run it without the `-o <filename>` option to inspect the output without overwriting the configuration file.)
 
 This will regenerate the boot entries in `/boot/grub2/grub.cfg`, autodetecting the root dataset containing the target system, and ensuring that each entry has a valid `root=` parameter pointing to that dataset.  This parameter instructs the initial RAM disk to mount the correct dataset during boot.

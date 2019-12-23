@@ -8,7 +8,7 @@ Summary:        Fixes GRUB2 grub-mkconfig
 Group:          System Environment/Kernel
 License:        GPLv2+
 URL:            http://github.com/Rudd-O/zfs-fedora-installer
-Source0:        grub-zfs-fixer.tar.gz
+Source0:        %{name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires:       python-unversioned-command, gawk, coreutils, grub2-tools
 BuildArch:      noarch
