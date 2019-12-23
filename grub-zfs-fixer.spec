@@ -1,7 +1,8 @@
+%undefine __brp_mangle_shebangs
 %define mybuildnumber %{?build_number}%{?!build_number:1}
 
 Name:           grub-zfs-fixer
-Version:        0.0.5
+Version:        0.0.6
 Release:        %{mybuildnumber}%{?dist}
 Summary:        Fixes GRUB2 grub-mkconfig
 
