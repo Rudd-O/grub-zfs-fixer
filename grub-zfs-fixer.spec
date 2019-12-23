@@ -1,7 +1,7 @@
 %define mybuildnumber %{?build_number}%{?!build_number:1}
 
 Name:           grub-zfs-fixer
-Version:        0.0.4
+Version:        0.0.5
 Release:        %{mybuildnumber}%{?dist}
 Summary:        Fixes GRUB2 grub-mkconfig
 
@@ -18,7 +18,7 @@ This package patches grub2-mkconfig to ensure that a proper
 GRUB2 configuration will be built.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
