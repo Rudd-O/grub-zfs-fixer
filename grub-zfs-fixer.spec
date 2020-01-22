@@ -2,7 +2,7 @@
 %define mybuildnumber %{?build_number}%{?!build_number:1}
 
 Name:           grub-zfs-fixer
-Version:        0.0.6
+Version:        0.0.7
 Release:        %{mybuildnumber}%{?dist}
 Summary:        Fixes GRUB2 grub-mkconfig
 
@@ -11,7 +11,7 @@ License:        GPLv2+
 URL:            http://github.com/Rudd-O/zfs-fedora-installer
 Source0:        %{name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires:       python-unversioned-command, gawk, coreutils, grub2-tools
+Requires:       python3, gawk, coreutils, grub2-tools
 BuildArch:      noarch
 
 %description
@@ -41,6 +41,9 @@ fi
 %{_bindir}/rm -f %{_sbindir}/grub2-mkconfig.bak
 
 %changelog
+* Wed Jan 22 2020 Manuel Amador (Rudd-O) <rudd-o@rudd-o.com> - 0.0.7-1
+- Use Python 3
+
 * Sun Dec 22 2019 Manuel Amador (Rudd-O) <rudd-o@rudd-o.com> - 0.0.4-1
 - Adapt to modern Fedora
 
